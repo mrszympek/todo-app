@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default props =>
-  <form>
+  <form onSubmit={ props.addTodoToList }>
     <input
       type='text'
       autoFocus
