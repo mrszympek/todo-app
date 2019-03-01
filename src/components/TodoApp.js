@@ -7,14 +7,19 @@ import Footer from './Footer'
 
 export default class TodoApp extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
+      currentTodo: '',
       todos: []
-    }
+    };
+
+    this.updateInputValue = this.updateInputValue.bind(this)
   }
 
-
+  updateInputValue(e) {
+    this.setState({currentTodo: e.target.value});
+  };
 
   render () {
     return (
@@ -22,7 +27,10 @@ export default class TodoApp extends Component {
         <div>
           <header className="header">
             <h1>todos</h1>
-            <TodoForm />
+            <TodoForm
+              currentTodo = { this.state.currentTodo }
+              updateInputValue = { this.updateInputValue }
+            />
           </header>
           <section className="main">
             <TodoList todos={this.state.todos} />
