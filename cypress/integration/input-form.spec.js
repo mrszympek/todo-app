@@ -35,7 +35,7 @@ describe('Input form', () => {
         .and('contain', todoText)
     });
 
-    it.only('Show error when server response is 500', () => {
+    it('Show error when server response is 500', () => {
       cy.server();
       cy.route({
         url: '/api/todos',
