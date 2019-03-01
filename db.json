@@ -1,1 +1,24 @@
-{}
+{
+  "todos": [
+    {
+      "id": 1,
+      "name": "Buy Chips",
+      "isComplete": false
+    },
+    {
+      "id": 2,
+      "name": "Buy plants",
+      "isComplete": false
+    },
+    {
+      "id": 3,
+      "name": "Go on the gym",
+      "isComplete": false
+    },
+    {
+      "id": 4,
+      "name": "Make breakfast",
+      "isComplete": false
+    }
+  ]
+}
